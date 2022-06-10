@@ -1,5 +1,12 @@
 ---
 blocks:
+  - tagline: Here's some text above the other text
+    headline: This Big Text is Totally Awesome
+    text: ''
+    image:
+      src: >-
+        https://res.cloudinary.com/dqlkdpa1x/image/upload/v1654682243/medium_cover_a7cffaf4d9.jpg
+    _template: hero
   - headline: Welcome to the Tina Starter
     text: >
       This project is set up to show you the basics of working with Tina. You're
@@ -24,6 +31,14 @@ blocks:
     _template: hero
   - items:
       - icon:
+          color: ''
+          style: float
+          name: ''
+        title: Here's Another Feature
+        text: >-
+          This is where you might talk about the feature, if this wasn't just
+          filler text.
+      - icon:
           color: red
           style: float
           name: code
@@ -37,14 +52,7 @@ blocks:
           name: like
         title: This Is a Feature
         text: Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.
-      - icon:
-          color: green
-          style: float
-          name: palette
-        title: Configurable Theme
-        text: >-
-          Edit global theme configuration with Tina. Change your theme's primary
-          color, font, or icon set.
     color: tint
     _template: features
 ---
+
