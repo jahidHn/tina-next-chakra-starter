@@ -1,6 +1,6 @@
 ---
 blocks:
-  - hero1heading: Fasted Frontend for Headless CMS & Wordpress
+  - hero1heading: Tina CMS Development with Nextjs & Jahid
     hero1content: >
       Developing high performant and seo frinedly websites and web applications
       with innovative & latest technologies
