@@ -5,6 +5,10 @@ blocks:
       Developing high performant and seo frinedly websites and web applications
       with innovative & latest technologies
     hero1buttons:
+      - hero1btnText: Here's Another Feature
+        hero1btnLink: /
+      - hero1btnText: Here's Another Feature
+        hero1btnLink: /
       - hero1btnText: Get a Quote
         hero1btnLink: /#get-quote
       - hero1btnText: Headless Wp Devlopment
@@ -56,6 +60,7 @@ blocks:
         text: >-
           This is where you might talk about the feature, if this wasn't just
           filler text.
+    color: tint
     _template: features2
 ---
 
