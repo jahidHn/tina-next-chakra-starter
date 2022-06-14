@@ -7,8 +7,11 @@ import { iconSchema } from "../util/icon";
 
 export const Feature = ({ featuresColor, data, tinaField }) => {
   return (
-    <div
-      data-tinafield={tinaField}
+    <div data-tinafield={tinaField}>
+      
+      
+      <div
+      
       className="flex-1 flex flex-col gap-6 text-center items-center lg:items-start lg:text-left max-w-xl mx-auto"
       style={{ flexBasis: "16rem" }}
     >
@@ -37,16 +40,41 @@ export const Feature = ({ featuresColor, data, tinaField }) => {
       )}
       {data.actions && <Actions actions={data.actions} />}
     </div>
+    </div>
+    
   );
 };
 
 export const Features = ({ data, parentField }) => {
   return (
     <Section color={data.color}>
+      
       <Container
-        className={`flex flex-wrap gap-x-10 gap-y-8 text-left`}
+        
         size="large"
       >
+        <div className="text-center mb-5">
+      {data.heading && (
+      <h2
+       
+        className="text-3xl font-semibold title-font"
+        
+      >
+        {data.heading}
+
+      </h2>
+       
+      )}
+    {data.subHeading && (
+      <p
+        
+        className="text-base opacity-80 leading-relaxed"
+      >
+        {data.subHeading}
+      </p>
+    )}
+    </div>
+        <div className={`flex flex-wrap gap-x-10 gap-y-8 text-left`}>
         {data.items &&
           data.items.map(function (block, i) {
             return (
@@ -58,11 +86,16 @@ export const Features = ({ data, parentField }) => {
               />
             );
           })}
+        </div>
+        
       </Container>
     </Section>
   );
 };
-
+const headingFeature = {
+  heading: "Featured Heading",
+  text: "Textured content Here"
+}
 const defaultFeature = {
   title: "Here's Another Feature",
   text: "This is where you might talk about the feature, if this wasn't just filler text.",
@@ -78,11 +111,27 @@ export const featureBlockSchema: TinaTemplate = {
   label: "Features",
   ui: {
     previewSrc: "/blocks/features.png",
+    defaultHeading: {
+      heading: [headingFeature]
+    },
     defaultItem: {
       items: [defaultFeature, defaultFeature, defaultFeature],
     },
   },
   fields: [
+    {
+      type: "string",
+      label: "Heading",
+      name: "heading",
+    },
+    {
+      type: "string",
+      label: "Sub Heading",
+      name: "subHeading",
+      ui: {
+        component: "textarea",
+      },
+    },
     {
       type: "object",
       label: "Feature Items",

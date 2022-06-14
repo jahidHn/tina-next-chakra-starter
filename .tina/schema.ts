@@ -1,7 +1,9 @@
 import { defineSchema, defineConfig } from "tinacms";
 import { contentBlockSchema } from "../components/blocks/content";
 import { featureBlockSchema } from "../components/blocks/features";
+import { ftBlockSchema } from "../components/blocks/features2";
 import { heroBlockSchema } from "../components/blocks/hero";
+import { Hero1BlockSchema } from "../components/blocks/hero1";
 import { testimonialBlockSchema } from "../components/blocks/testimonial";
 import { iconSchema } from "../components/util/icon";
 
@@ -344,6 +346,8 @@ const schema = defineSchema({
             featureBlockSchema,
             contentBlockSchema,
             testimonialBlockSchema,
+            Hero1BlockSchema,
+            ftBlockSchema
           ],
         },
       ],

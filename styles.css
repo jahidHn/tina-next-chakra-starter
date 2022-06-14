@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body {
+        @apply whitespace-pre-wrap text-base
+    }
+    h1 {
+        @apply text-5xl lg:text-7xl mb-4 font-bold leading-tight;
+    }
+    h2 {
+        @apply text-4xl lg:text-5xl font-bold leading-tight;
+    }
+    h3 {
+        @apply text-3xl lg:text-3xl font-bold leading-tight;
+    }
+}

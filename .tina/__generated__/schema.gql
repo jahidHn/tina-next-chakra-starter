@@ -201,6 +201,7 @@ type PageBlocksHero {
   text: JSON
   actions: [PageBlocksHeroActions]
   image: PageBlocksHeroImage
+  svg: String
   color: String
 }
 
@@ -217,6 +218,8 @@ type PageBlocksFeaturesItems {
 }
 
 type PageBlocksFeatures {
+  heading: String
+  subHeading: String
   items: [PageBlocksFeaturesItems]
   color: String
 }
@@ -232,7 +235,43 @@ type PageBlocksTestimonial {
   color: String
 }
 
-union PageBlocks = PageBlocksHero | PageBlocksFeatures | PageBlocksContent | PageBlocksTestimonial
+type PageBlocksHero1Hero1buttons {
+  hero1btnText: String
+  hero1btnLink: String
+}
+
+type PageBlocksHero1Hero1image {
+  src: String
+  alt: String
+}
+
+type PageBlocksHero1 {
+  hero1heading: String
+  hero1content: JSON
+  hero1buttons: [PageBlocksHero1Hero1buttons]
+  hero1image: PageBlocksHero1Hero1image
+}
+
+type PageBlocksFeatures2ItemsIcon {
+  color: String
+  style: String
+  name: String
+}
+
+type PageBlocksFeatures2Items {
+  icon: PageBlocksFeatures2ItemsIcon
+  title: String
+  text: String
+}
+
+type PageBlocksFeatures2 {
+  heading: String
+  subHeading: String
+  items: [PageBlocksFeatures2Items]
+  color: String
+}
+
+union PageBlocks = PageBlocksHero | PageBlocksFeatures | PageBlocksContent | PageBlocksTestimonial | PageBlocksHero1 | PageBlocksFeatures2
 
 type Page implements Node & Document {
   blocks: [PageBlocks]
@@ -348,6 +387,7 @@ input PageBlocksHeroMutation {
   text: JSON
   actions: [PageBlocksHeroActionsMutation]
   image: PageBlocksHeroImageMutation
+  svg: String
   color: String
 }
 
@@ -364,6 +404,8 @@ input PageBlocksFeaturesItemsMutation {
 }
 
 input PageBlocksFeaturesMutation {
+  heading: String
+  subHeading: String
   items: [PageBlocksFeaturesItemsMutation]
   color: String
 }
@@ -379,11 +421,49 @@ input PageBlocksTestimonialMutation {
   color: String
 }
 
+input PageBlocksHero1Hero1buttonsMutation {
+  hero1btnText: String
+  hero1btnLink: String
+}
+
+input PageBlocksHero1Hero1imageMutation {
+  src: String
+  alt: String
+}
+
+input PageBlocksHero1Mutation {
+  hero1heading: String
+  hero1content: JSON
+  hero1buttons: [PageBlocksHero1Hero1buttonsMutation]
+  hero1image: PageBlocksHero1Hero1imageMutation
+}
+
+input PageBlocksFeatures2ItemsIconMutation {
+  color: String
+  style: String
+  name: String
+}
+
+input PageBlocksFeatures2ItemsMutation {
+  icon: PageBlocksFeatures2ItemsIconMutation
+  title: String
+  text: String
+}
+
+input PageBlocksFeatures2Mutation {
+  heading: String
+  subHeading: String
+  items: [PageBlocksFeatures2ItemsMutation]
+  color: String
+}
+
 input PageBlocksMutation {
   hero: PageBlocksHeroMutation
   features: PageBlocksFeaturesMutation
   content: PageBlocksContentMutation
   testimonial: PageBlocksTestimonialMutation
+  hero1: PageBlocksHero1Mutation
+  features2: PageBlocksFeatures2Mutation
 }
 
 input PageMutation {

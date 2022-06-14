@@ -82,6 +82,13 @@ export const Hero = ({ data, parentField }) => {
             />
           </div>
         )}
+        {data.svg && (
+          <div
+          data-tinafield={`${parentField}.image`}
+          className="row-start-1 flex justify-center"
+        >
+          <div className="w-full max-w-xs lg:max-w-none h-auto" dangerouslySetInnerHTML={{__html: data.svg }} /></div>
+        )}
       </Container>
     </Section>
   );
@@ -94,7 +101,7 @@ export const heroBlockSchema: TinaTemplate = {
     previewSrc: "/blocks/hero.png",
     defaultItem: {
       tagline: "Here's some text above the other text",
-      headline: "This Big Text is Totally Awesome",
+      headline: "Fasted Frontend for Headless CMS & Wordpress",
       text: "Phasellus scelerisque, libero eu finibus rutrum, risus risus accumsan libero, nec molestie urna dui a leo.",
     },
   },
@@ -170,6 +177,12 @@ export const heroBlockSchema: TinaTemplate = {
           type: "string",
         },
       ],
+    },
+    {
+      name: 'svg',
+      type: 'string',
+      label: 'Enter SVG code',
+      description: 'Enter the post description here',
     },
     {
       type: "string",

@@ -1,35 +1,21 @@
 ---
 blocks:
-  - tagline: Here's some text above the other text
-    headline: This Big Text is Totally Awesome
-    text: ''
-    image:
+  - hero1heading: Fasted Frontend for Headless CMS & Wordpress
+    hero1content: >
+      Developing high performant and seo frinedly websites and web applications
+      with innovative & latest technologies
+    hero1buttons:
+      - hero1btnText: Get a Quote
+        hero1btnLink: /#get-quote
+      - hero1btnText: Headless Wp Devlopment
+        hero1btnLink: /
+    hero1image:
       src: >-
-        https://res.cloudinary.com/dqlkdpa1x/image/upload/v1654682243/medium_cover_a7cffaf4d9.jpg
-    _template: hero
-  - headline: Welcome to the Tina Starter
-    text: >
-      This project is set up to show you the basics of working with Tina. You're
-      looking at the landing page, which pulls content from
-      content/pages/home.md, components from components/blocks, and puts them
-      all together in pages/\[filename].tsx, all based on a schema defined in
-      .tina/schema.ts.
-    actions:
-      - label: Get Started
-        type: button
-        icon: true
-        link: /posts
-      - label: Read Blog
-        type: link
-        icon: false
-        link: /posts
-    image:
-      src: >-
-        https://res.cloudinary.com/forestry-demo/image/upload/v1628102029/tina-cloud-starter/tina-illustration.WebP
-      alt: Tina
-    color: default
-    _template: hero
-  - items:
+        https://res.cloudinary.com/dqlkdpa1x/image/upload/v1655206674/growth-headless-wordpress-cms_k5iqlb.svg
+    _template: hero1
+  - heading: Featured 2 Heading
+    subHeading: Featured 2 Sub Heading
+    items:
       - icon:
           color: ''
           style: float
@@ -39,20 +25,37 @@ blocks:
           This is where you might talk about the feature, if this wasn't just
           filler text.
       - icon:
-          color: red
+          color: ''
           style: float
-          name: code
-        title: Amazing Feature
+          name: ''
+        title: Here's Another Feature
         text: >-
-          Aliquam blandit felis rhoncus, eleifend ipsum in, condimentum nibh.
-          Praesent ac faucibus risus, eu lacinia enim.
+          This is where you might talk about the feature, if this wasn't just
+          filler text.
       - icon:
-          color: primary
+          color: ''
           style: float
-          name: like
-        title: This Is a Feature
-        text: Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.
-    color: tint
-    _template: features
+          name: ''
+        title: 'Blazing fast Static site '
+        text: >-
+          This is where you might talk about the feature, if this wasn't just
+          filler text.
+      - icon:
+          color: ''
+          style: float
+          name: ''
+        title: Here's Another Feature
+        text: >-
+          This is where you might talk about the feature, if this wasn't just
+          filler text.
+      - icon:
+          color: ''
+          style: float
+          name: ''
+        title: Here's Another Feature
+        text: >-
+          This is where you might talk about the feature, if this wasn't just
+          filler text.
+    _template: features2
 ---
 

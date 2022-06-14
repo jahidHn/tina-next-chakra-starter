@@ -71,9 +71,12 @@ fragment PageParts on Page {
         src
         alt
       }
+      svg
       color
     }
     ... on PageBlocksFeatures {
+      heading
+      subHeading
       items {
         __typename
         icon {
@@ -94,6 +97,36 @@ fragment PageParts on Page {
     ... on PageBlocksTestimonial {
       quote
       author
+      color
+    }
+    ... on PageBlocksHero1 {
+      hero1heading
+      hero1content
+      hero1buttons {
+        __typename
+        hero1btnText
+        hero1btnLink
+      }
+      hero1image {
+        __typename
+        src
+        alt
+      }
+    }
+    ... on PageBlocksFeatures2 {
+      heading
+      subHeading
+      items {
+        __typename
+        icon {
+          __typename
+          color
+          style
+          name
+        }
+        title
+        text
+      }
       color
     }
   }
