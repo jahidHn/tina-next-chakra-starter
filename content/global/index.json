@@ -3,7 +3,7 @@
     "icon": {
       "color": "orange",
       "style": "float",
-      "name": "tina"
+      "name": "trophy"
     },
     "color": "default",
     "nav": [
@@ -30,9 +30,9 @@
     }
   },
   "theme": {
-    "color": "blue",
+    "color": "red",
     "font": "sans",
     "icon": "boxicon",
-    "darkMode": "system"
+    "darkMode": "dark"
   }
 }
